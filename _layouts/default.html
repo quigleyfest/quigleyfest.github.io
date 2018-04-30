@@ -4,17 +4,118 @@
   {% include head.html %}
 
   <body>
-
-    {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
+    <section class="landscape">
       <div class="wrapper">
-        {{ content }}
+        <img src="/assets/img/quigleyfest.png" alt="Quigleyfest" class="quigleyfest">
+        <h2><strong>Saturday 1st September</strong> College Valley, Northumberland</h2>
+
+        <a href="#top" class="scroll-down">Tell me more!</a>
       </div>
-    </main>
+    </section>
 
-    {% include footer.html %}
+    <section class="content yellow" id="top">
+      <div class="wrapper">
+        <h2 class="pink">Deirdre &amp; Eoghan are getting married!</h2>
 
+        <h3>When?</h3>
+        <p>Saturday 1st September 2018</p>
+        <p>2:15pm</p>
+
+        <h3>Where?</h3>
+        <p>Cuddystone Hall, College Valley, Kirknewton, Wooler, NE716TP</p>
+
+        <h3>Why?</h3>
+        <p>Tax reasons</p>
+
+        <h3>How?</h3>
+        In a ceremony as quick as legally possible
+
+        <h3>Who?</h3>
+        <p>Guests who receive an invite, and wedding crashers - welcome if they are good craic!</p>
+      </div>
+    </section>
+
+    <section class="content green">
+      <div class="wrapper">
+        <h2>Hello!</h2>
+        <p>At last we are getting married and we have set up a website to get people who want to come excited
+and give them some local info to plan travel/accommodation etc.</p>
+        <p>We are planning a pretty informal rural wedding in the beautiful Cheviot Hills in Northumberland.</p>
+        <p> Think green hill backdrop, village hall, BBQ, tent and hopefully some sunshine...</p>
+      </div>
+    </section>
+
+    <section class="content blue">
+      <div class="wrapper">
+    <h2>Accommodation</h2>
+     <p>There are some limited cottages and a hostel in College Valley itself, as well as Bed and Breakfasts
+in Wooler (the closest village to the valley).</p>
+     <p>Many guests will decide to stay in Newcastle as there
+will be many more options of budget hotels and apartments along with good links to airport.</p>
+      </div>
+    </section>
+
+    <section class="content yellow">
+      <div class="wrapper">
+      <h2>Travel</h2>
+
+      <h3>Bus</h3>
+      <p>We will run a bus from Newcastle city centre, leaving at approximately 12.30pm stopping at
+      Wooler, to the venue to arrive at 14:15pm. And another bus to take people back at the end of the
+      night, 12.30am. Please let us know with RSVP if you need a space on the bus!</p>
+
+      <h3>Car</h3>
+      <p>The venue is 1hr 30mins from Newcastle. There will be car parking for drivers at hall and at
+cottages.</p>
+
+      <h3>Taxis</h3>
+      <p>Taxis will be available to book but it is a good idea to book these ahead of time as mobile
+signal will be limited in the valley. The cottages in the valley do have landlines (these are olden
+days phone that plug into walls and don't rely on mobile phone signal)</p>
+
+      <h3>Flights</h3>
+      <p>Nearest airport is Newcastle Airport, There is no public transport directly between the
+venue and the airport but it is well linked with the Metro and taxis to Newcastle city centre. The
+metro takes about 30 minutes - remember to buy a ticket, there are no barriers at the airport (usually)
+but there are always ones in city centre stops!</p>
+
+<p>Will update with details on the bus and put people in touch of lift shares are possible!</p>
+    </div>
+    </section>
+
+    <section class="content pink">
+    <div class="wrapper">
+    <h2>RSVP!</h2>
+
+    <p>You can email us or text us to RSVP!</p>
+
+    <h3>Text</h3>
+    <p>Text Deirdre on xxxx or Eoghan on xxxxx</p>
+
+    <h3>Email</h3>
+    <p>Email <a href="mailto:emailaddress">emailaddress@email.com</a></p>
+
+    <p>Please RSVP by the end of July!</p>
+    </div>
+    </section>
   </body>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+  $(document).ready(function(){
+  $(".scroll-down").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+  </script>
 </html>
